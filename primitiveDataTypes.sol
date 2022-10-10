@@ -25,7 +25,6 @@ struct StudentID {
 }
 
 mapping(address => StudentID) public studentRecord;
-StudentID students;
 
 function registerStudent(address _addr, string memory _name, uint8 _percentage, uint8 _totalMarks) public onlyOwner {
 require(!studentRecord[_addr].inSystem,"Student already registered");
