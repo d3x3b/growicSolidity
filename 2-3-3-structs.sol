@@ -21,7 +21,9 @@ require (!userDetails[msg.sender].registered, "User already KYC'ed.");
 }
 
 function getUserDetails () public view returns (string memory _name, uint _age) {
+    if (userDetails[msg.sender] == true{
     return (_name = userDetails[msg.sender].name, _age = userDetails[msg.sender].age);
+}
 }
 
 function deposit (uint _depositBalance) public {
