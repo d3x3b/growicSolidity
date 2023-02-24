@@ -85,5 +85,6 @@ return (_balance = balance[msg.sender]);
 // !! Notice here how value(_amount) needs no uint because function already knows to use that value type!!
 function addFund (uint _amount) public hasDeposited value(_amount) {
         balance[msg.sender]= balance[msg.sender] + _amount;
+        emit FundsDeposited(msg.sender, _amount);
 }
 }
